@@ -1,0 +1,22 @@
+/* @import "tailwindcss";
+
+@theme{
+    --color-primary: #e73c3e;
+} */
+
+
+/* @keyframes marquee {
+    0%{
+        transform: translateX(0);
+    }
+    
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll{
+    animation: marquee 15s linear infinite;
+} */
+
+

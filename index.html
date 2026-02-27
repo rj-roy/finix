@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finix - Loans & Funding</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="assets/images/logo - Copy.png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/main.js" defer></script>
+
+    <!-- 4. jQuery (MUST be before Owl Carousel & your script) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- 5. Owl Carousel JS (MUST be after jQuery) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- 2. Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+
+<body class="container max-w-full mx-auto">
+    <header class="flex items-center justify-between relative px-5 max-w-6xl mx-auto">
+        <section>
+            <img src="assets/images/logo.png" alt="">
+        </section>
+
+        <section class="flex items-center justify-between gap-4">
+
+            <!-- desktop nav -->
+            <nav class="hidden lg:flex">
+                <ul class="float-left flex gap-3 font-bold">
+                    <li class="hover:text-[#e73c3e]"><a href="#">Home</a></li>
+                    <li class="hover:text-[#e73c3e]"><a href="#">Pages</a></li>
+                    <li class="hover:text-[#e73c3e]"><a href="#">Services</a></li>
+                    <li class="hover:text-[#e73c3e]"><a href="#">Funding</a></li>
+                    <li class="hover:text-[#e73c3e]"><a href="#">Loans</a></li>
+                    <li class="hover:text-[#e73c3e]"><a href="#">News</a></li>
+                    <li class="hover:text-[#e73c3e]"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- mobile nav -->
+            <section id="mobile-nav-menu" class="absolute top-0 -right-5 hidden">
+                <nav class="bg-[#a09191] z-10 px-5 pr-8 h-screen relative">
+                    <button onclick="closeNav()" id="nav-close-btn" class="mb-5">
+                        <span class="absolute right-10 pr-5">
+                            <span class="absolute block w-5 h-0.5 bg-[#000000] rotate-45"></span>
+                            <span class="absolute block w-5 h-0.5 bg-[#ff0000] -rotate-45"></span>
+                        </span>
+                    </button>
+                    <ul class="space-y-3 font-bold text-right">
+                        <li
+                            class="hover:text-[#e73c3e] border-b border-b-[#dfdcdc] w-[250px] items-center bg-[#998989] p-2 rounded-sm">
+                            <a href="#">Home</a>
+                        </li>
+                        <li
+                            class="hover:text-[#e73c3e] border-b border-b-[#dfdcdc] w-[250px] items-center bg-[#998989] p-2 rounded-sm">
+                            <a href="#">Pages</a>
+                        </li>
+                        <li
+                            class="hover:text-[#e73c3e] border-b border-b-[#dfdcdc] w-[250px] items-center bg-[#998989] p-2 rounded-sm">
+                            <a href="#">Services</a>
+                        </li>
+                        <li
+                            class="hover:text-[#e73c3e] border-b border-b-[#dfdcdc] w-[250px] items-center bg-[#998989] p-2 rounded-sm">
+                            <a href="#">Funding</a>
+                        </li>
+                        <li
+                            class="hover:text-[#e73c3e] border-b border-b-[#dfdcdc] w-[250px] items-center bg-[#998989] p-2 rounded-sm">
+                            <a href="#">Loans</a>
+                        </li>
+                        <li
+                            class="hover:text-[#e73c3e] border-b border-b-[#dfdcdc] w-[250px] items-center bg-[#998989] p-2 rounded-sm">
+                            <a href="#">News</a>
+                        </li>
+                        <li
+                            class="hover:text-[#e73c3e] border-b border-b-[#dfdcdc] w-[250px] items-center bg-[#998989] p-2 rounded-sm">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+
+            <div class="flex items-center gap-4">
+                <search class="border-r border-red-200 pr-2">
+                    <input class="hidden" type="text" name="" id="" placeholder="Search">
+                    <img class="w-7 h-7" src="assets/images/search.png" alt="">
+                </search>
+
+                <div class="hidden lg:flex gap-2 items-center">
+                    <img class="w-9 h-9" src="assets/images/phone-call.png" alt="">
+                    <div>
+                        <p class="text-gray-500">Call Now</p>
+                        <a class="font-bold" href="tel:+8801234567890">+880 1234-567890</a>
+                    </div>
+                </div>
+
+                <button class="btn btn-active btn-secondary bg-[#e73c3e] hover:bg-black border-none">Apply Now</button>
+
+                <!-- mobile menu button -->
+                <button id="nav-btn" onclick="navbtn()" class="space-y-1 grid place-items-end lg:hidden">
+                    <div class="bg-[#313030] h-[3px] w-6"></div>
+                    <div class="bg-[#313030] h-0.5 w-4"></div>
+                    <div class="bg-[#313030] h-[3px] w-6"></div>
+                </button>
+
+            </div>
+        </section>
+    </header>
+
+    <!-- bg-image -->
+    <div class="absolute bg-[url('/assets/images/main-banner2.jpg')] bg-cover bg-center w-full inset-0 -z-50 bg-fixed">
+    </div>
+
+    <main class="max-w-6xl mx-auto">
+        <!-- hero section -->
+        <section class="min-h-screen flex flex-col">
+            <div class="flex flex-col justify-center mt-auto px-4">
+                <div class="space-y-5">
+                    <p class="text-[16px] text-[#e73c3e]">We are here for</p>
+                    <h1 class="text-4xl font-bold">We believe in those<br> made to do more</h1>
+                    <p class="text-[16px] text-gray-500"> Loans are advantageous as a relatively inexpensive way of
+                        borrowing money.<br>Start or grow your own
+                        business </p>
+                    <button class="btn btn-active btn-secondary bg-[#e73c3e] hover:bg-black border-none"><a
+                            href="#">View
+                            More</a></button>
+                </div>
+            </div>
+
+            <div class="flex justify-start mt-auto pb-20 px-4">
+                <figure class="flex items-center gap-1">
+                    <figcaption class="text-[16px]">Follow us ---</figcaption>
+                    <div class="flex gap-2">
+                        <i><img class="w-4 h-4" src="assets/images/social/facebook.png" alt=""></i>
+                        <i><img class="w-4 h-4" src="assets/images/social/instagram.png" alt=""></i>
+                        <i><img class="w-4 h-4" src="assets/images/social/social.png" alt=""></i>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <!-- partner section (owl-carousel) -->
+        <section class="max-w-6xl mx-auto flex justify-center overflow-hidden border-b border-b-[#e7e5e5]">
+            <div id="carousel"
+                class="owl-carousel flex items-center space-x-8 justify-center py-6 gap-6 overflow-hidden  whitespace-nowrap">
+                <img class="w-1 h-8 sm:w-full sm:h-full" src="assets/images/partner/image1.png" alt="">
+                <img class="w-1 h-8 sm:w-full sm:h-full" src="assets/images/partner/image2.png" alt="">
+                <img class="w-1 h-8 sm:w-full sm:h-full" src="assets/images/partner/image3.png" alt="">
+                <img class="w-1 h-8 sm:w-full sm:h-full" src="assets/images/partner/image4.png" alt="">
+                <img class="w-1 h-8 sm:w-full sm:h-full" src="assets/images/partner/image5.png" alt="">
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="grid md:grid-cols-2 grid-cols-1 gap-8 mt-30 px-4 bg-[#f9fafb]">
+            <figure class="relative">
+                <img src="assets/images/about/image3.png" alt="">
+                <figcaption class="absolute bottom-0 right-10">
+                    <img class="relative" src="assets/images/about/shape.png" alt="">
+                    <div class="absolute top-11 left-8 grid text-center">
+                        <data class="text-7xl font-bold text-[#e73c3e]" value="25">25</data>
+                        <span class="font-bold">Years Of Experience</span>
+                    </div>
+                </figcaption>
+            </figure>
+
+            <div class="space-y-7">
+                <span class="text-[#e73c3e]">About Company</span>
+                <h2 class="text-4xl font-bold">We have been working very efficiently with loan and funding for 25 years.
+                </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                </p>
+
+                <div class="space-y-5">
+                    <h3>In Business, we focus on 3 things</h3>
+                    <ul class="focus-list space-y-1">
+                        <li>
+                            <span class="text-[#e73c3e] font-bold" aria-hidden="true">✓</span>
+                            <span>Useful info</span>
+                        </li>
+                        <li>
+                            <span class="text-[#e73c3e] font-bold" aria-hidden="true">✓</span>
+                            <span>Reliability</span>
+                        </li>
+                        <li>
+                            <span class="text-[#e73c3e] font-bold" aria-hidden="true">✓</span>
+                            <span>Innovation</span>
+                        </li>
+                    </ul>
+                </div>
+                <a class="btn btn-active btn-secondary bg-[#e73c3e] hover:bg-black border-none" href="#">View More</a>
+            </div>
+        </section>
+
+        <!-- Why Choose -->
+        <section class="mt-30 px-4 grid grid-cols-1 lg:grid-cols-2 overflow-hidden hover:overflow-visible bg-[#f9fafb]">
+            <figure class="relative">
+                <figcaption class="space-y-7">
+                    <span class="text-[#e73c3e]">Transparent process</span>
+                    <h2 class="text-4xl font-bold">Why people choose us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus doloremque repellat harum
+                        temporibus qui id modi. Corrupti soluta modi numquam laudantium maiores illo.</p>
+                </figcaption>
+                <img class="-z-40" src="assets/images/choose.png" alt="">
+                <div class="absolute bottom-20 left-80 rounded-full p-4 bg-[#ffffff] hover:bg-[#e73c3e] z-50">
+                    <div class="bg-[#e73c3e] hover:bg-white rounded-full">
+                        <svg class="w-12 h-12 text-[#ffffff] hover:text-[#e73c3e] cursor-pointer transition-colors z-50"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        <div class="bg-[#e73c3e] w-20 h-20 animate-ping rounded-full absolute top-0 left-0 -z-30"></div>
+                    </div>
+                </div>
+            </figure>
+
+
+
+
+            <div class="grid gird-cols-1 lg:grid-cols-2 gap-6">
+
+                <div
+                    class="relative group w-full px-6 py-16 overflow-hidden text-center bg-white z-50 hover:-translate-y-10 transition-transform ease-in-out duration-2000">
+
+                    <div
+                        class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[80%] rounded-full bg-[#fdebeb] -z-10 opacity-90">
+                    </div>
+
+                    <div class="relative z-50 max-w-lg mx-auto flex flex-col items-center">
+                        <div class="p-4 mb-6 rounded-full shadow-lg bg-[#ffffff] group-hover:bg-[#e73c3e]">
+                            <img class="group-hover:bg-[#c32f18] w-15 h-15 object-contain bg-white rounded-full"
+                                src="assets/images/icon/guarantee-certificate.png" alt="">
+                        </div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Gurantee</h2>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </p>
+                </div>
+                
+                <div
+                    class="relative group w-full px-6 py-16 overflow-hidden text-center bg-white z-50 hover:-translate-y-10 transition-transform ease-in-out duration-2000">
+
+                    <div
+                        class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[80%] rounded-full bg-[#fdebeb] -z-10 opacity-90">
+                    </div>
+
+                    <div class="relative z-50 max-w-lg mx-auto flex flex-col items-center">
+                        <div class="p-4 mb-6 rounded-full shadow-lg bg-[#ffffff] group-hover:bg-[#e73c3e]">
+                            <img class="group-hover:bg-[#c32f18] w-15 h-15 object-contain bg-white rounded-full"
+                                src="assets/images/icon/expertise.png" alt="">
+                        </div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Expertise</h2>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </p>
+                </div>
+                <div
+                    class="relative group w-full px-6 py-16 overflow-hidden text-center bg-white z-50 hover:-translate-y-10 transition-transform ease-in-out duration-2000">
+
+                    <div
+                        class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[80%] rounded-full bg-[#fdebeb] -z-10 opacity-90">
+                    </div>
+
+                    <div class="relative z-50 max-w-lg mx-auto flex flex-col items-center">
+                        <div class="p-4 mb-6 rounded-full shadow-lg bg-[#ffffff] group-hover:bg-[#e73c3e]">
+                            <img class="group-hover:bg-[#c32f18] w-15 h-15 object-contain bg-white rounded-full"
+                                src="assets/images/icon/reliability.png" alt="">
+                        </div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Reliability</h2>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </p>
+                </div>
+                <div
+                    class="relative group w-full px-6 py-16 overflow-hidden text-center bg-white z-50 hover:-translate-y-10 transition-transform ease-in-out duration-2000">
+
+                    <div
+                        class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[80%] rounded-full bg-[#fdebeb] -z-10 opacity-90">
+                    </div>
+
+                    <div class="relative z-50 max-w-lg mx-auto flex flex-col items-center">
+                        <div class="p-4 mb-6 rounded-full shadow-lg bg-[#ffffff] group-hover:bg-[#e73c3e]">
+                            <img class="group-hover:bg-[#c32f18] w-15 h-15 object-contain bg-white rounded-full"
+                                src="assets/images/icon/rush.png" alt="">
+                        </div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Speed</h2>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    </p>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <!-- Funding Circles -->
+        <section>
+
+        </section>
+
+
+    </main>
+</body>
+
+</html>
