@@ -9,8 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link rel="icon" href="assets/images/logo - Copy.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="scripts/my-custom-tags/custom-tags.js"></script>
+    <link rel="stylesheet" href="scripts/my-custom-tags/custom-tags.css">
     <link rel="stylesheet" href="style.css">
     <script src="scripts/main.js" defer></script>
+
 
     <!-- 4. jQuery (MUST be before Owl Carousel & your script) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -147,7 +151,7 @@
         </section>
 
         <!-- partner section (owl-carousel) -->
-        <section class="max-w-6xl mx-auto flex justify-center overflow-hidden border-b border-b-[#e7e5e5]">
+        <section class="max-w-6xl mx-auto flex justify-center overflow-hidden border-b border-b-[#e7e5e5] hidden">
             <div id="carousel"
                 class="owl-carousel flex items-center space-x-8 justify-center py-6 gap-6 overflow-hidden  whitespace-nowrap">
                 <img class="w-1 h-8 sm:w-full sm:h-full" src="assets/images/partner/image1.png" alt="">
@@ -159,7 +163,7 @@
         </section>
 
         <!-- About -->
-        <section class="grid md:grid-cols-2 grid-cols-1 gap-8 mt-30 px-4 bg-[#ffffff]">
+        <section class="grid md:grid-cols-2 grid-cols-1 gap-8 mt-30 px-4 bg-[#ffffff] hidden">
             <figure class="relative">
                 <img src="assets/images/about/image3.png" alt="">
                 <figcaption class="absolute bottom-0 right-10">
@@ -201,7 +205,8 @@
         </section>
 
         <!-- Why Choose -->
-        <section class="mt-30 px-4 grid grid-cols-1 lg:grid-cols-2 overflow-hidden hover:overflow-visible bg-[#ffffff] py-40 gap-10">
+        <section
+            class="mt-30 px-4 grid grid-cols-1 lg:grid-cols-2 overflow-hidden hover:overflow-visible bg-[#ffffff] py-40 gap-10 hidden">
             <figure class="relative">
                 <figcaption class="space-y-7">
                     <span class="text-[#e73c3e]">Transparent process</span>
@@ -210,7 +215,8 @@
                         temporibus qui id modi. Corrupti soluta modi numquam laudantium maiores illo.</p>
                 </figcaption>
                 <img class="-z-40" src="assets/images/choose.png" alt="">
-                <div class="absolute bottom-20 left-80 rounded-full p-4 bg-[#ffffff] hover:bg-[#e73c3e] z-50">
+                <div
+                    class="absolute bottom-15 left-75 lg:bottom-75 lg:left-75 sm:bottom-15 sm:left-75 rounded-full p-4 bg-[#ffffff] hover:bg-[#e73c3e] z-50">
                     <div class="bg-[#e73c3e] hover:bg-white rounded-full">
                         <svg class="w-12 h-12 text-[#ffffff] hover:text-[#e73c3e] cursor-pointer transition-colors z-50"
                             viewBox="0 0 24 24" fill="currentColor">
@@ -244,7 +250,7 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                     </p>
                 </div>
-                
+
                 <div
                     class="relative group w-full px-6 py-16 overflow-hidden text-center bg-[#f7f5f5] rounded-xl z-50 hover:-translate-y-20 transition-transform ease-in-out duration-2000 -translate-y-10">
 
@@ -306,22 +312,116 @@
 
 
         <!-- Funding Circles -->
-        <section>
-            <header class="text-center space-y-6">
-                <p>Funding circles</p>
-                <h2>You deserve a better business loan</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, quae soluta. Sit cum consequatur optio quo, natus inventore</p>
-            </header>
+        <section class="px-4 space-y-15">
+            <top-sec class="text-center space-y-3">
+                <p class="text-[#c32f18]">Funding circles</p>
+                <h2 class="text-4xl font-bold">You deserve a better business loan</h2>
+                <p class="text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, quae soluta. Sit
+                    cum consequatur
+                    optio quo, natus inventore</p>
+            </top-sec>
 
-            <article>
-                <div>
-                    <h2>We usually follow 4 steps to get a better business loans.</h2>
+            <middle-sec class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <left-sec class="space-y-6 ">
+                    <h2 class="text-[25px] font-[550]">We usually follow 4 seeps to get a better business loans</h2>
 
-                    <div>
+                    <extra-block class="">
+                        <!-- 1 -->
+                        <div class="flex gap-3">
+                            <div id="indicator" class="flex flex-col items-center justify-center mx-auto">
+                                <div id="circle"
+                                    class="border border-red-500 rounded-full w-10 h-10 text-2xl flex items-center justify-center p-2">
+                                    1</div>
+                                <div id="line" class="h-full w-[3px] bg-red-500"></div>
+                            </div>
+                            <div id="content" class="space-y-3">
+                                <h4 class="text-2xl font-bold">Apply in 10 minutes</h4>
+                                <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
 
+                        <!-- 2 -->
+                        <div class="flex gap-3">
+                            <div id="indicator" class="flex flex-col items-center justify-center mx-auto">
+                                <div id="circle"
+                                    class="border border-red-500 rounded-full w-10 h-10 text-2xl flex items-center justify-center p-2">
+                                    1</div>
+                                <div id="line" class="h-full w-[3px] bg-red-500"></div>
+                            </div>
+                            <div id="content" class="space-y-3">
+                                <h4 class="text-2xl font-bold">Hear from us in 1 hour</h4>
+                                <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="flex gap-3">
+                            <div id="indicator" class="flex flex-col items-center justify-center mx-auto">
+                                <div id="circle"
+                                    class="border border-red-500 rounded-full w-10 h-10 text-2xl flex items-center justify-center p-2">
+                                    1</div>
+                                <div id="line" class="h-full w-[3px] bg-red-500"></div>
+                            </div>
+                            <div id="content" class="space-y-3">
+                                <h4 class="text-2xl font-bold">A decision in 24 hours</h4>
+                                <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+
+                        <!-- 4 -->
+                        <div class="flex gap-3">
+                            <div id="indicator" class="flex flex-col items-center justify-center mx-auto">
+                                <div id="circle"
+                                    class="border border-red-500 rounded-full w-10 h-10 text-2xl flex items-center justify-center p-2">
+                                    1</div>
+                                <div id="line" class="h-full"></div>
+                            </div>
+                            <div id="content" class="space-y-3">
+                                <h4 class="text-2xl font-bold">Your load is funded</h4>
+                                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </extra-block>
+                    <a href="#"
+                        class="btn btn-active btn-secondary bg-[#e73c3e] hover:bg-black border-none items-center">Apply
+                        Now</a>
+                </left-sec>
+
+                <right-sec class="w-full bg-[#fdebeb] rounded-xl !flex flex-col justify-center">
+
+                    <extra-block class="text-center">
+                        <p class="text-gray-500">Calculate you rate</p>
+                        <h2 class="text-2xl font-bold">How Much Do You Need?</h2>
+                    </extra-block>
+
+                    <div class="card mx-auto w-full">
+                        <div class="card-body w-full flex justify-center">
+                            <fieldset class="fieldset w-full flex flex-col justify-center">
+                                <label for="amount" class="label">Type The Money</label>
+                                <input id="amount" type="number" class="input w-full" placeholder="$1000" />
+                                <label class="label">Slect The Month/Years</label>
+                                <select class="select w-full">
+                                    <option selected>1 Month</option>
+                                    <option>2 Month</option>
+                                    <option>3 Month</option>
+                                    <option>4 Month</option>
+                                    <option>6 Month</option>
+                                    <option>1 Year</option>
+                                    <option>2 Years</option>
+                                    <option>3 Years</option>
+                                </select>
+                                <label for="borrow" class="label">Borrowing</label>
+                                <input id="borrow" type="number" class="input w-full" placeholder="$10000" />
+                                <label for="terms" class="label">Terms Of Use</label>
+                                <input id="terms" type="text" class="input w-full" placeholder="6 month" />
+                                <label for="pay" class="label">The Total you Will Pay</label>
+                                <input id="pay" type="number" class="input w-full" placeholder="$11200" />
+                                <button class="btn btn-neutral bg-red-500 border-none hover:bg-black mt-4">Apply for this loan</button>
+                            </fieldset>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </right-sec>
+            </middle-sec>
         </section>
 
 

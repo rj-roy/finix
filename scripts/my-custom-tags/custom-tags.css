@@ -1,0 +1,12 @@
+c-article {
+  display: block;          /* Forces it to a new line (Div behavior) */
+  width: 100%;             /* Takes full width of parent */
+  margin-bottom: 1.5rem;   /* Standard article spacing */
+  unicode-bidi: isolate;  /* Browser default for structural containers */
+}
+
+/* e-example, left-sec, right-sec */
+e-example, left-sec, right-sec, top-sec, bottom-sec, text-group, extra-block{
+  display: block;
+  unicode-bidi: isolate; /* Standard browser behavior for divs */
+}
