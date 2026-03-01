@@ -1,27 +1,27 @@
 function navbtn() {
-    const mobileNavMenu = document.getElementById("mobile-nav-menu");
-    mobileNavMenu.classList.remove("hidden");
+  const mobileNavMenu = document.getElementById("mobile-nav-menu");
+  mobileNavMenu.classList.remove("hidden");
 }
 
-function closeNav(){
-    const mobileNavMenu = document.getElementById("mobile-nav-menu");
-    mobileNavMenu.classList.add("hidden");
+function closeNav() {
+  const mobileNavMenu = document.getElementById("mobile-nav-menu");
+  mobileNavMenu.classList.add("hidden");
 }
 
 
 // owl carousel
-$(document).ready(function(){
+$(document).ready(function () {
   $("#carousel").owlCarousel({
     loop: true,
     margin: 48,
     autoplay: true,
     autoplayTimeout: 2000,
     autoplaySpeed: 700,
-    responsive:{
-      0:{ items: 1 },
-      640:{ items: 3 },
-      768:{ items: 4 },
-      1024:{ items: 5 }
+    responsive: {
+      0: { items: 1 },
+      640: { items: 3 },
+      768: { items: 4 },
+      1024: { items: 5 }
     }
   });
 });
@@ -30,33 +30,118 @@ $(document).ready(function(){
 
 
 
-// const carousel = document.querySelector("#carousel")
-
-// window.addEventListener("load", () =>{
-//   setInterval(() => {
-//     const firstItem = carousel.firstElementChild;
-
-//     const itemWidth = firstItem.getBoundingClientRect().width;
-//     const gap = parseFloat(getComputedStyle(carousel).columnGap || 0);
-//     const totalMove = itemWidth + gap
-
-//     carousel.style.transition = "transform 0.7s linear";
-//     carousel.style.transform = `translateX(-${totalMove}px)`;
-
-//     setTimeout(()=>{
-//       carousel.style.transition = "none";
-//       carousel.appendChild(firstItem);
-//       carousel.style.transform = "translateX(0)";
-//       carousel.offsetHeight;
-//     },700)
 
 
 
-//     console.log(itemWidth);  
-//     console.log(gap);
-//     console.log(totalMove);
-//   }, 2000)
-// })
+// the Thumbnail Slider
+document.addEventListener('DOMContentLoaded', function () {
+  var swiperThumbs = new Swiper(".mySwiper", {
+    spaceBetween: 0,
+    slidesPerView: 6,
+    freeMode: true,
+    watchSlidesProgress: true,
+    loop: true,
+    freeMode: true,
+    watchSlidesProgress: true,
+    autoplay: {
+      delay: 3000,
+      reverseDirection: false,
+    },
+    breakpoints: {
+      0: { slidesPerView: 2 },
+      640: { slidesPerView: 2 },
+      768: { slidesPerView: 4 },
+      1024: { slidesPerView: 6 },
+    }
+  });
+
+  // Main Slider (mySwiper2)
+  var swiperMain = new Swiper(".mySwiper2", {
+    spaceBetween: 10,
+    thumbs: {
+      swiper: swiperThumbs,
+    },
+    autoplay: {
+      delay: 3000, 
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    }
+    // navigation arrows or pagination
+  });
+});
+
+
+
+
+
+
+const carousel = document.querySelector("#carousel")
+
+window.addEventListener("load", () => {
+  setInterval(() => {
+    const firstItem = carousel.firstElementChild;
+
+    const itemWidth = firstItem.getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(carousel).columnGap || 0);
+    const totalMove = itemWidth + gap
+
+    carousel.style.transition = "transform 0.7s linear";
+    carousel.style.transform = `translateX(-${totalMove}px)`;
+
+    setTimeout(() => {
+      carousel.style.transition = "none";
+      carousel.appendChild(firstItem);
+      carousel.style.transform = "translateX(0)";
+      carousel.offsetHeight;
+    }, 700)
+
+
+
+    console.log(itemWidth);
+    console.log(gap);
+    console.log(totalMove);
+  }, 2000)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // swiper slide
+// // Initialize the icon navigation
+// var swiperThumbs = new Swiper(".thumbSwiper", {
+//   spaceBetween: 10,
+//   slidesPerView: 6,
+//   freeMode: true,
+//   watchSlidesProgress: true,
+// });
+
+// // Initialize the main content
+// var swiperMain = new Swiper(".mainSwiper", {
+//   spaceBetween: 30,
+//   loop: true,
+//   autoplay: {
+//     delay: 5000, // Moves every 5 seconds
+//     disableOnInteraction: false, // Keeps moving after user clicks
+//   },
+//   thumbs: {
+//     swiper: swiperThumbs, // Links to the icons above
+//   },
+//   effect: 'fade', // Optional: Makes the content fade instead of slide
+//   fadeEffect: {
+//     crossFade: true
+//   },
+// });
+
+
 
 
 
@@ -112,7 +197,7 @@ $(document).ready(function(){
 // //     carousel.classList.remove("flex");
 // //     carousel.classList.add("grid");
 
-// //     // const convertedStyle = 
+// //     // const convertedStyle =
 // //   }
 // // }
 

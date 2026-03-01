@@ -81,3 +81,30 @@ class ExtraBlock extends HTMLElement{
     }
 }
 customElements.define('extra-block', ExtraBlock);
+
+
+// carousel
+class CaroSec extends HTMLElement{
+    constructor(){
+        super();
+    }
+}
+customElements.define('caro-sec', CaroSec);
+
+
+// c-carousel tag
+class CaroIndic extends HTMLElement{
+    constructor(){
+        super();
+    }
+}
+customElements.define('caro-indic', CaroIndic);
+
+
+// slide content
+class SlideContent extends HTMLElement{
+    constructor(){
+        super();
+    }
+}
+customElements.define('slide-content', SlideContent);

@@ -16,16 +16,19 @@
     <script src="scripts/main.js" defer></script>
 
 
-    <!-- 4. jQuery (MUST be before Owl Carousel & your script) -->
+    <!--  jQuery Owl Carousel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- 5. Owl Carousel JS (MUST be after jQuery) -->
+    <!--  Owl Carousel JS after jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!-- 2. Owl Carousel CSS -->
+    <!--  Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Swiper Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body class="container max-w-full mx-auto">
@@ -321,7 +324,7 @@
                     optio quo, natus inventore</p>
             </top-sec>
 
-            <bottom-sec class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <bottom-sec class="!grid grid-cols-1 md:grid-cols-2 gap-6 space-y-6">
                 <left-sec class="space-y-6 ">
                     <h2 class="text-[25px] font-[550]">We usually follow 4 seeps to get a better business loans</h2>
 
@@ -429,24 +432,506 @@
             </bottom-sec>
         </section>
 
-        <section class="max-w-6xl mx-auto px-4 !grid grid-cols-1 lg:grid-cols-[60%_40%] bg-[#e73c3e] rounded-sm py-10 space-y-5  my-30">
+        <!-- contact num -->
+        <section
+            class="max-w-6xl mx-auto px-4 !grid grid-cols-1 lg:grid-cols-[60%_40%] bg-[#e73c3e] rounded-sm py-10 space-y-6  my-30">
             <left-sec class="!flex justify-center place-items-center lg:border-r border-r-[#ebe7e7]">
                 <h2 class="text-[25px] font-bold text-white text-center">we Are here to help your business
                     Call to discuss your Solution</h2>
             </left-sec>
 
-            <right-sec class="!flex justify-center place-items-center gap-15">
+            <right-sec class="grid grid-cols-1 lg:!flex justify-center place-items-center gap-15 space-y-5">
                 <div class="bg-white w-20 h-20 p-4 rounded-full flex items-center justify-center">
                     <img class="w-10 h-10" src="assets/images/phone-call.png" alt="">
                 </div>
-                <a href="tel:+8801735739" class="flex justify-center items-center text-[25px] font-bold text-white">+880172328899</a>
+                <a href="tel:+8801735739"
+                    class="flex justify-center items-center text-[25px] font-bold text-white">+880172328899</a>
             </right-sec>
         </section>
 
+        <!-- Company values -->
+        <section class="grid grid-cols-1 md:grid-cols-2 px-5">
+            <left-sec class="space-y-6 ">
+                <h2 class="text-3xl font-bold">Our Company Values</h2>
+                <extra-block class="">
+                    <!-- 1 -->
+                    <div class="flex gap-3">
+                        <div id="indicator" class="flex flex-col mx-auto">
+                            <div id="circle"
+                                class="rounded-full w-20 h-20 text-2xl flex items-center justify-center p-2">
+                                <img src="assets/images/icon/new-ideas-in-process.png" alt="">
+                            </div>
+                        </div>
+                        <div id="content" class="space-y-3">
+                            <h4 class="text-2xl font-bold">Innovative</h4>
+                            <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
 
-        <section class="mt-66"></section>
 
+                    <!-- 2 -->
+                    <div class="flex gap-3">
+                        <div id="indicator" class="flex flex-col mx-auto">
+                            <div id="circle"
+                                class="rounded-full w-20 h-20 text-2xl flex items-center justify-center p-2">
+                                <img src="assets/images/icon/reliability.png" alt="">
+                            </div>
+                        </div>
+                        <div id="content" class="space-y-3">
+                            <h4 class="text-2xl font-bold">Talent</h4>
+                            <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
 
+                    <!-- 3 -->
+                    <div class="flex gap-3">
+                        <div id="indicator" class="flex flex-col mx-auto">
+                            <div id="circle"
+                                class="rounded-full w-20 h-20 text-2xl flex items-center justify-center p-2">
+                                <img src="assets/images/icon/concept.png" alt="">
+                            </div>
+                        </div>
+                        <div id="content" class="space-y-3">
+                            <h4 class="text-2xl font-bold">Enabling</h4>
+                            <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="flex gap-3">
+                        <div id="indicator" class="flex flex-col mx-auto">
+                            <div id="circle"
+                                class="rounded-full w-20 h-20 text-2xl flex items-center justify-center p-2">
+                                <img src="assets/images/icon/responsibility.png" alt="">
+                            </div>
+                        </div>
+                        <div id="content" class="space-y-3">
+                            <h4 class="text-2xl font-bold">Commercially Responsible</h4>
+                            <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </extra-block>
+            </left-sec>
+
+            <right-sec class="!flex justify-center items-center">
+                <img src="assets/images/company2.png" alt="">
+            </right-sec>
+        </section>
+
+        <!-- Professional services -->
+        <section class="mt-15 space-y-15 px-4">
+            <top-sec class="text-center space-y-3 !grid justify-center place-items-center">
+                <p class="text-red-500">Knowladge of the market</p>
+                <h3 class="text-3xl font-bold">Only the best professional services</h3>
+                <p class="w-[70%]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam quam unde fuga
+                    itaque, quis vero ab! Et culpa perferendis saepe similique molestiae a assumenda perspiciatis nulla
+                    voluptatem. Ullam, explicabo autem.</p>
+            </top-sec>
+
+            <bottom-sec>
+                <caro-sec class="swiper-container-group">
+                    <caro-indic class="swiper mySwiper mb-8">
+                        <div id="slidesAll" class="swiper-wrapper cursor-pointer">
+                            <!-- 1 -->
+                            <div class="swiper-slide">
+                                <figure
+                                    class="flex flex-col justify-start items-center space-y-2 border-b border-b-gray-400">
+                                    <img class="w-17 h-17 p-3 bg-[#d6cdcd] rounded-full"
+                                        src="assets/images/loan/personal.png" alt="">
+                                    <figcaption class="text-[20px] font-bold text-center mb-5">Personal Loan
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            
+                            <!-- 2 -->
+                            <div class="swiper-slide">
+                                <figure
+                                    class="flex flex-col justify-start items-center space-y-2 border-b border-b-gray-400">
+                                    <img class="w-17 h-17 p-3 bg-[#d6cdcd] rounded-full"
+                                        src="assets/images/loan/financing.png" alt="">
+                                    <figcaption class="text-[20px] font-bold text-center mb-5">Business Loan
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            
+                            <!-- 3 -->
+                            <div class="swiper-slide">
+                                <figure
+                                    class="flex flex-col justify-start items-center space-y-2 border-b border-b-gray-400">
+                                    <img class="w-17 h-17 p-3 bg-[#d6cdcd] rounded-full"
+                                        src="assets/images/loan/mortarboard.png" alt="">
+                                    <figcaption class="text-[20px] font-bold text-center mb-5">Education Loan
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <!-- 4 -->
+                            <div class="swiper-slide">
+                                <figure
+                                    class="flex flex-col justify-start items-center space-y-2 border-b border-b-gray-400">
+                                    <img class="w-17 h-17 p-3 bg-[#d6cdcd] rounded-full"
+                                        src="assets/images/loan/real-estate.png" alt="">
+                                    <figcaption class="text-[20px] font-bold text-center mb-5">House Loan
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <!-- 5 -->
+                            <div class="swiper-slide">
+                                <figure
+                                    class="flex flex-col justify-start items-center space-y-2 border-b border-b-gray-400">
+                                    <img class="w-17 h-17 p-3 bg-[#d6cdcd] rounded-full"
+                                        src="assets/images/loan/unsecured-loan.png" alt="">
+                                    <figcaption class="text-[20px] font-bold text-center mb-5">Payday Loan
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <!-- 6 -->
+                            <div class="swiper-slide">
+                                <figure
+                                    class="flex flex-col justify-start items-center space-y-2 border-b border-b-gray-400">
+                                    <img class="w-17 h-17 p-3 bg-[#d6cdcd] rounded-full"
+                                        src="assets/images/loan/loan.png" alt="">
+                                    <figcaption class="text-[20px] font-bold text-center mb-5">Agricultural Loan
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            
+                        </div>
+                    </caro-indic>
+
+                    <!-- slide content -->
+                    <article class="swiper mySwiper2 container mx-auto px-4 py-12 max-w-6xl">
+                        <div class="swiper-wrapper">
+                            <!-- personal -->
+                            <slide-content class="!grid grid-cols-1 lg:grid-cols-2 gap-12 items-center swiper-slide">
+                                <div class="">
+                                    <img src="assets/images/services-tab.png" alt="">
+                                </div>
+                                <div class="space-y-8 pl-4">
+                                    <div>
+                                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Personal Loan</h2>
+                                        <p class="text-gray-600 leading-relaxed text-base">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                            facilisis.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Types of Personal loan</h3>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Secured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Unsecured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Revolving credit facilities
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Business cash advances
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Eligibility and criteria for
+                                            Personal loan</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Education loan guide</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+                                            accumsan lacus vel facilisis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </slide-content>
+                            <!-- Business -->
+                            <slide-content class="!grid grid-cols-1 lg:grid-cols-2 gap-12 items-center swiper-slide">
+                                <div class="">
+                                    <img src="assets/images/services-tab.png" alt="">
+                                </div>
+                                <div class="space-y-8 pl-4">
+                                    <div>
+                                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Business loan</h2>
+                                        <p class="text-gray-600 leading-relaxed text-base">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                            facilisis.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Types of business loan</h3>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Secured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Unsecured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Revolving credit facilities
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Business cash advances
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Eligibility and criteria for
+                                            Business loan</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Business loan guide</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+                                            accumsan lacus vel facilisis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </slide-content>
+                            <!-- education -->
+                            <slide-content class="!grid grid-cols-1 lg:grid-cols-2 gap-12 items-center swiper-slide">
+                                <div class="">
+                                    <img src="assets/images/services-tab.png" alt="">
+                                </div>
+                                <div class="space-y-8 pl-4">
+                                    <div>
+                                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Education loan</h2>
+                                        <p class="text-gray-600 leading-relaxed text-base">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                            facilisis.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Types of education loan</h3>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Secured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Unsecured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Revolving credit facilities
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Business cash advances
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Eligibility and criteria for
+                                            Education loan</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Education loan guide</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+                                            accumsan lacus vel facilisis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </slide-content>
+                            <!-- House -->
+                            <slide-content class="!grid grid-cols-1 lg:grid-cols-2 gap-12 items-center swiper-slide">
+                                <div class="">
+                                    <img src="assets/images/services-tab.png" alt="">
+                                </div>
+                                <div class="space-y-8 pl-4">
+                                    <div>
+                                        <h2 class="text-3xl font-bold text-gray-900 mb-4">House loan</h2>
+                                        <p class="text-gray-600 leading-relaxed text-base">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                            facilisis.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Types of House loan</h3>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Secured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Unsecured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Revolving credit facilities
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Business cash advances
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Eligibility and criteria for
+                                            House loan</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">House loan guide</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+                                            accumsan lacus vel facilisis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </slide-content>
+                            <!-- payday -->
+                            <slide-content class="!grid grid-cols-1 lg:grid-cols-2 gap-12 items-center swiper-slide">
+                                <div class="">
+                                    <img src="assets/images/services-tab.png" alt="">
+                                </div>
+                                <div class="space-y-8 pl-4">
+                                    <div>
+                                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Payday loan</h2>
+                                        <p class="text-gray-600 leading-relaxed text-base">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                            facilisis.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Types of Payday loan</h3>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Secured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Unsecured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Revolving credit facilities
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Business cash advances
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Eligibility and criteria for
+                                            Education loan</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Payday loan guide</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+                                            accumsan lacus vel facilisis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </slide-content>
+                            <!-- Agricultural -->
+                            <slide-content class="!grid grid-cols-1 lg:grid-cols-2 gap-12 items-center swiper-slide">
+                                <div class="">
+                                    <img src="assets/images/services-tab.png" alt="">
+                                </div>
+                                <div class="space-y-8 pl-4">
+                                    <div>
+                                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Agricultural loan</h2>
+                                        <p class="text-gray-600 leading-relaxed text-base">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+                                            ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                            facilisis.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Types of agricultural loan</h3>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Secured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Unsecured loans
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Revolving credit facilities
+                                            </li>
+                                            <li class="flex items-center text-gray-700">
+                                                <span class="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></span>
+                                                Business cash advances
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Eligibility and criteria for
+                                            Education loan</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Agricultural loan guide</h3>
+                                        <p class="text-gray-600 leading-relaxed">
+                                            Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+                                            accumsan lacus vel facilisis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </slide-content>
+                        </div>
+                    </article>
+                </caro-sec>
+            </bottom-sec>
+        </section>
     </main>
 </body>
 

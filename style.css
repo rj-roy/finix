@@ -20,3 +20,13 @@
 } */
 
 
+.mySwiper .swiper-slide-thumb-active {
+    border-bottom-color: #ef4444 !important; 
+    border-bottom-width: 2px !important;     
+    opacity: 1 !important;                   
+}
+
+
+.mySwiper .swiper-slide {
+    transition: all 0.3s ease-in;
+}
